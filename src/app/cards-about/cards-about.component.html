@@ -1,0 +1,17 @@
+<section class="pt-20 text-start flex justify-center items-center min-h-screen">
+  <div class="container mx-auto py-10 px-5 sm:px-10 lg:px-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      @for (aboutCard of aboutCards; track $index) {
+      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <img class="rounded-t-lg" [src]="aboutCard.aimgCard" alt="Item Image" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Item {{$index + 1}}</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">This is the first card.</p>
+        </div>
+      </div>
+      }
+
+    </div>
+  </div>
+</section>
